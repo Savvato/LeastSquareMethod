@@ -58,9 +58,7 @@ public class Application
      * Вывод в консоль
      */
     private void writeResult() {
-        /**
-         * TODO: writing the result matrix
-         */
+        this.result.write();
     }
 
 

@@ -42,4 +42,16 @@ public class Matrix
          */
         return null;
     }
+
+    /**
+     * Вывод в консоль
+     */
+    public void write() {
+        for (double[] rows : this.matrix) {
+            for (double columnValue : rows) {
+                System.out.print(columnValue + " ");
+            }
+            System.out.println();
+        }
+    }
 }
