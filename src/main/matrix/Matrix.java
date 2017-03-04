@@ -27,6 +27,7 @@ public class Matrix
         /**
          * TODO: realize the matrix multiplication
          */
+        return null;
     }
 
     /**
@@ -39,5 +40,6 @@ public class Matrix
         /**
          * TODO: realize the matrix inverting
          */
+        return null;
     }
 }
