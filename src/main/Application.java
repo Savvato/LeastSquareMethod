@@ -4,7 +4,6 @@ import main.matrix.Matrix;
 import main.method.LeastSquareMethod;
 import main.method.Point;
 
-import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Application
@@ -30,20 +29,19 @@ public class Application
      */
     private void readPoints() {
         Scanner input = new Scanner(System.in);
-        PrintStream output = System.out;
         this.points = new Point[Application.NUMBER_OF_POINTS];
         for (int i = 0; i < Application.NUMBER_OF_POINTS; i++) {
-            output.println("==================================");
-            output.println("Point " + (i + 1));
-            output.print("Enter x1: ");
+            System.out.println("==================================");
+            System.out.println("Point " + (i + 1));
+            System.out.print("Enter x1: ");
             double x1 = input.nextDouble();
-            output.print("Enter x2: ");
+            System.out.print("Enter x2: ");
             double x2 = input.nextDouble();
-            output.print("Enter y: ");
+            System.out.print("Enter y: ");
             double y = input.nextDouble();
             this.points[i] = new Point(x1, x2, y);
         }
-        output.println("==================================");
+        System.out.println("==================================");
     }
 
     /**
@@ -58,8 +56,7 @@ public class Application
      * Вывод в консоль
      */
     private void writeResult() {
+        System.out.println("============RESULT============");
         this.result.write();
     }
-
-
 }
