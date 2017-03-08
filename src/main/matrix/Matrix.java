@@ -167,17 +167,4 @@ public class Matrix
         }
         return column;
     }
-
-    /**
-     * Вывод в консоль
-     */
-    public void write() {
-        for (double[] rows : this.data) {
-            for (double columnValue : rows) {
-                System.out.print(columnValue + " ");
-            }
-            System.out.println();
-        }
-    }
-
 }

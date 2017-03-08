@@ -57,6 +57,9 @@ public class Application
      */
     private void writeResult() {
         System.out.println("============RESULT============");
-        this.result.write();
+        double[] result = this.result.getColumn(0);
+        for (int i = 0; i < result.length; i++) {
+            System.out.println("c" + (i + 1) + " = " + result[i]);
+        }
     }
 }
