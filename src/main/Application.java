@@ -1,6 +1,7 @@
 package main;
 
 import main.matrix.Matrix;
+import main.method.Formula;
 import main.method.LeastSquareMethod;
 import main.method.Point;
 
@@ -22,6 +23,20 @@ public class Application
         this.readPoints();
         this.calculateResult();
         this.writeResult();
+        this.tryFormula();
+    }
+
+    private void tryFormula() {
+        Formula formula = this.createFormula();
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("===================");
+            System.out.print("Enter x1: ");
+            double x1 = scanner.nextDouble();
+            System.out.print("Enter x2: ");
+            double x2 = scanner.nextDouble();
+            System.out.println("Result: " + formula.calculate(x1, x2));
+        }
     }
 
     /**
@@ -61,5 +76,15 @@ public class Application
         for (int i = 0; i < result.length; i++) {
             System.out.println("c" + (i + 1) + " = " + result[i]);
         }
+    }
+
+    /**
+     * Создание формулы для тестирования
+     *
+     * @return формула
+     */
+    private Formula createFormula() {
+        double[] result = this.result.getColumn(0);
+        return new Formula(result[0], result[1], result[2]);
     }
 }
