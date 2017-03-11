@@ -46,7 +46,7 @@ public class Application
         Scanner input = new Scanner(System.in);
         this.points = new Point[Application.NUMBER_OF_POINTS];
         for (int i = 0; i < Application.NUMBER_OF_POINTS; i++) {
-            System.out.println("==================================");
+            System.out.println("==========TEST FORMULA========================");
             System.out.println("Point " + (i + 1));
             System.out.print("Enter x1: ");
             double x1 = input.nextDouble();
