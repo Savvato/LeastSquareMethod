@@ -115,10 +115,12 @@ public class Matrix
             if (k > 0) {//если номер ведущей строки не первый
                 for (i = 0; i < k; i++) {   //строки, находящиеся выше k-ой
                     for (j = 0; j < size; j++) {
-                        unitMatrix.data[i][j] = unitMatrix.data[i][j] - unitMatrix.data[k][j] * bufferMatrix.data[i][k];//Вычисляем элементы единичной матрицы,идя по столбцам с 0 -ого  к последнему
+                        //Вычисляем элементы единичной матрицы,идя по столбцам с 0 -ого  к последнему
+                        unitMatrix.data[i][j] = unitMatrix.data[i][j] - unitMatrix.data[k][j] * bufferMatrix.data[i][k];
                     }
                     for (j = size - 1; j >= k; j--) {
-                        bufferMatrix.data[i][j] = bufferMatrix.data[i][j] - bufferMatrix.data[k][j] * bufferMatrix.data[i][k];//Вычисляем элементы исходной матрицы,идя по столбцам с последнего к k-ому
+                        //Вычисляем элементы исходной матрицы,идя по столбцам с последнего к k-ому
+                        bufferMatrix.data[i][j] = bufferMatrix.data[i][j] - bufferMatrix.data[k][j] * bufferMatrix.data[i][k];
                     }
                 }
             }
